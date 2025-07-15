@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="home">
+  <div class="container py-5">
+    <div class="register-box text-center">
+      <h2 class="mb-4">⚙️ Update Your Profile</h2>
+
+      <form method="post" style="max-width: 500px; margin: 0 auto; text-align: left;">
+
+        <div class="mb-3">
+          <label for="nickname" class="form-label">Nickname</label>
+          <input type="text" class="form-control" id="nickname" name="nickname" value="{{ profile.nickname }}" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="year" class="form-label">Academic Year</label>
+          <select name="year" id="year" class="form-control">
+            <option {% if profile.year == "1st Year" %}selected{% endif %}>1st Year</option>
+            <option {% if profile.year == "2nd Year" %}selected{% endif %}>2nd Year</option>
+            <option {% if profile.year == "3rd Year" %}selected{% endif %}>3rd Year</option>
+            <option {% if profile.year == "4th Year" %}selected{% endif %}>4th Year</option>
+            <option {% if profile.year == "5th Year" %}selected{% endif %}>5th Year</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="cgpa" class="form-label">CGPA</label>
+          <input type="number" class="form-control" id="cgpa" name="cgpa" step="0.1" value="{{ profile.cgpa }}">
+        </div>
+
+        <div class="mb-3">
+          <label for="interests" class="form-label">Interests</label>
+          <input type="text" class="form-control" id="interests" name="interests" value="{{ profile.interests }}">
+        </div>
+
+        <button class="btn white-btn mt-3" type="submit">Save Changes</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
