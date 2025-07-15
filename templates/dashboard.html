@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="home">
+  <div class="register-box text-center">
+    <h2 class="mb-4">Welcome back, {{ profile.nickname }}! 🎉</h2>
+
+    <!-- Profile Summary -->
+    <div class="text-start mb-4" style="line-height: 2; font-size: 1.1rem;">
+      <p><strong>📚 Course:</strong> {{ profile.course }}</p>
+      <p><strong>🎓 Year:</strong> {{ profile.year }}</p>
+      {% if profile.qualification %}
+        <p><strong>🎓 Qualification:</strong> {{ profile.qualification }}</p>
+      {% endif %}
+      {% if profile.cgpa %}
+        <p><strong>📊 CGPA:</strong> {{ profile.cgpa }}</p>
+      {% endif %}
+      <p><strong>💡 Interests:</strong> {{ profile.interests }}</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="custom-card green">
+          <div class="card-top">
+            <span>🎯</span>
+            <h5>Goals</h5>
+          </div>
+          <div class="card-bottom">
+            <p>Set and track daily or weekly goals.</p>
+            <a href="/goals">🎯Goals</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="custom-card teal">
+          <div class="card-top">
+            <span>📈</span>
+            <h5>Skill Tracker</h5>
+          </div>
+          <div class="card-bottom">
+            <p>Track progress and levels in skills.</p>
+            <a href="/skills">📈Skills</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="custom-card blue">
+          <div class="card-top">
+            <span>🎓</span>
+            <h5>Suggestions</h5>
+          </div>
+          <div class="card-bottom">
+            <p>Get smart career or learning ideas.</p>
+            <a href="/suggestions">🎓Suggestions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="custom-card gray">
+          <div class="card-top">
+            <span>⚙️</span>
+            <h5>Settings</h5>
+          </div>
+          <div class="card-bottom">
+            <p>Manage your account and details.</p>
+            <a href="/settings">⚙️Settings</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <hr class="my-5">
+     <div class="text-center">
+        <a href="/logout" class="btn white-btn">
+          Log out
+        </a>
+      </div>
+</div>
+{% endblock %}
