@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="home">
+  <div class="register-box text-center">
+    <h2 class="mb-4">🎯 Your Learning Path, {{ profile.nickname }}!</h2>
+
+    <p><strong>Course:</strong> {{ profile.course }}</p>
+    <p><strong>Year:</strong> {{ profile.year }}</p>
+    <p><strong>Interests:</strong> {{ profile.interests }}</p>
+
+    <hr>
+
+    <div class="text-start mt-4">
+      <h5>🔮 Smart Suggestions:</h5>
+      <ul>
+        {% set course = profile["course"] %}
+        {% set interests = profile["interests"] %}
+
+        {% if course in ["Engineering", "Science"] %}
+            <li>Build a portfolio website</li>
+            <li>Practice with Git, GitHub & version control</li>
+            <li>Work on domain-specific mini projects</li>
+
+        {% elif course == "Medicine" %}
+            <li>Revise clinical procedures and protocols</li>
+            <li>Explore recent case studies in your field</li>
+            <li>Take mock MCQ or NEET PG test</li>
+
+        {% elif course in ["Arts", "Commerce"] %}
+            <li>Start a blog or content portfolio</li>
+            <li>Explore public speaking and communication tools</li>
+            <li>Work on research or case-based assignments</li>
+
+        {% elif course == "Other" %}
+            <li>Take time to explore your interests</li>
+            <li>Try out short courses on Udemy or Coursera</li>
+            <li>Write weekly reflections on what you learn</li>
+
+        {% else %}
+            <li>Set weekly learning goals</li>
+            <li>Join a community that aligns with your field</li>
+            <li>Track and reward yourself for consistency</li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
