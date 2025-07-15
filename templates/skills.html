@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="home">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2>📈 Skill Tracker</h2>
+      <p class="lead">Here's how your skills are shaping up, {{ profile.nickname }}.</p>
+    </div>
+
+    <!-- Skill Progress Bars -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+
+        <div class="mb-4">
+          <label class="form-label fw-bold">🧠 Critical Thinking</label>
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width: 75%;">75%</div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-bold">🗣 Communication</label>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 65%;">65%</div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-bold">💻 Tech Awareness</label>
+          <div class="progress">
+            <div class="progress-bar bg-primary" style="width: 50%;">50%</div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-bold">📅 Time Management</label>
+          <div class="progress">
+            <div class="progress-bar bg-warning" style="width: 60%;">60%</div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-bold">📚 Learning Agility</label>
+          <div class="progress">
+            <div class="progress-bar bg-secondary" style="width: 45%;">45%</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="text-center mt-4 text-muted">✨ These are starter stats. Soon you'll level up with your real performance!</p>
+  </div>
+</div>
+{% endblock %}
+
