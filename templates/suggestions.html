@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="home">
+  <div class="container py-5">
+    <div class="register-box text-center">
+      <h2 class="mb-4">🔮 Suggestions for You, {{ profile.nickname }}!</h2>
+      <p class="lead mb-4">Based on your course and interests, here are some handpicked ideas for you to explore:</p>
+
+      <div class="text-start mx-auto" style="max-width: 650px;">
+        {% set course = profile.course %}
+        {% set interests = profile.interests.lower() %}
+
+        <ul style="line-height: 2;">
+          {% if course == "Engineering" %}
+            <li>⚙️ Create a hardware + software integration project</li>
+            <li>🔩 Learn version control with Git and GitHub</li>
+            <li>💡 Try out Arduino or Raspberry Pi ideas</li>
+
+          {% elif course == "Commerce" or course == "Arts" %}
+            <li>📝 Start a content blog or newsletter</li>
+            <li>🎤 Take up a public speaking or podcast challenge</li>
+            <li>📈 Explore tools like Canva, Notion, or Google Analytics</li>
+
+          {% elif course == "Medicine" %}
+            <li>🧬 Explore bioinformatics basics</li>
+            <li>📚 Write short summaries of medical case studies</li>
+            <li>👩‍⚕️ Practice mock NEET PG / AIIMS questions</li>
+
+          {% else %}
+            <li>🌱 Explore short online courses in your field</li>
+            <li>🧘 Track your weekly learning habits</li>
+            <li>🧑‍💻 Build a simple project in your area of interest</li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <p class="text-muted mt-4">✨ These will get smarter as your profile grows!</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
