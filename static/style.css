@@ -1,0 +1,244 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+    background: linear-gradient(to right, #3e1e68, #2b5876, #4e4376);
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;         /* Full screen height */
+    margin: 0;
+    padding-top: 40px;
+    display: block;
+    flex-direction: column;     /* 👈 Stack vertically */
+    justify-content: center;    /* 👈 Vertically center */
+    align-items: center;        /* 👈 Horizontally center */
+    text-align: center;
+}
+.home .top-section{
+    padding-top: 40px;              /* ✅ Push down a little from very top */
+    text-align: center;
+}
+.home h1 {
+    font-size: 3rem;
+    margin-bottom: 0.01rem;
+}
+
+.motto {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #000000;
+  margin-top: 0.5rem;
+}
+
+.about-section {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #000000;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.white-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #ffffff;
+    padding: 9px 30px;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.cta-buttons {
+    text-align: center;
+    margin-top: -50px; /* ↓ was probably too large before */
+    margin-bottom: 10px;
+}
+
+.white-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 180px;
+}
+
+.footer-links a {
+    margin: 0 15px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+body, h1, h2, p, a {
+  font-style: normal;
+}
+
+.center-wrapper {
+    display: flex;
+    justify-content: center;    /* horizontal centering */
+    align-items: center;        /* vertical centering */
+    min-height: 80vh;          /* take full screen height */
+}
+
+.register-box {
+    background: rgba(255, 255, 255, 0.85); /* Optional: light background box */
+    padding: 40px 30px;
+    margin: 40px auto 20px auto;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 450px;
+    width: 70%;
+}
+
+input.form-control {
+    margin-bottom: 20px;  /* adds spacing below each input */
+}
+
+input[type="radio"]:checked + .avatar-option {
+  border-color: #3e1e68;
+  transform: scale(1.1);
+}
+
+.register-box {
+  background-color: #f2f2f2;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+}
+
+.form-control {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#qualification-wrapper .form-control {
+  width: 48%;
+  display: inline-block;
+}
+
+#qualification-wrapper .form-control:first-child {
+  margin-right: 4%;
+}
+
+.custom-card {
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-top {
+  background-color: #fff;
+  padding: 20px 10px 10px;
+  flex: 1;
+}
+
+.card-top span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-top h5 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-bottom {
+  color: #fff;
+  padding: 15px;
+  font-size: 0.95rem;
+}
+
+.card-bottom a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.green .card-bottom { background-color: #28a745; }
+.teal .card-bottom { background-color: #20c997; }
+.blue .card-bottom { background-color: #007bff; }
+.purple .card-bottom { background-color: #6f42c1; }
+.orange .card-bottom { background-color: #fd7e14; }
+.gray .card-bottom { background-color: #6c757d; }
+
+.progress {
+  height: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+.progress-bar {
+  font-weight: 300;
+  font-size: 1.0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li::marker {
+  font-size: 1.2rem;
+}
