@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="home">
+  <div class="register-box text-center">
+    <h2 class="mb-4">Set Up Your Profile</h2>
+
+    <form method="post" style="max-width: 500px; margin: 0 auto; text-align: left;">
+
+      <!-- Nickname -->
+      <div class="mb-4">
+        <label for="nickname" class="form-label">What can we call you?</label>
+        <input type="text" class="form-control" name="nickname" id="nickname" required>
+      </div>
+
+      <!-- Course -->
+      <div class="mb-4">
+        <label for="course" class="form-label">Select your course</label>
+        <select class="form-control" name="course" id="course" onchange="updateFields()" required>
+          <option disabled selected>Select your course</option>
+          <option value="Arts">Arts</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Medicine">Medicine</option>
+          <option value="Science">Science</option>
+          <option value="Commerce">Commerce</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Qualification -->
+      <div class="mb-4" id="qualification-wrapper" style="display: none;">
+        <label class="form-label">Previous Qualification</label>
+        <div class="d-flex justify-content-between gap-2">
+          <select class="form-control me-2" id="qualification-level" onchange="syncQualification()" style="width: 49%;">
+            <option disabled selected>Select qualification level</option>
+            <option value="Undergraduate">Undergraduate</option>
+            <option value="Postgraduate">Postgraduate</option>
+          </select>
+
+          <select class="form-control" id="qualification-status" onchange="syncQualification()" style="width: 49%;">
+            <option disabled selected>Status</option>
+            <option value="Pursuing">Pursuing</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+        <input type="hidden" name="qualification" id="qualification">
+      </div>
+
+      <!-- Academic Year -->
+      <div class="mb-4" id="academic-year-div"></div>
+
+      <!-- CGPA -->
+      <div class="mb-4" id="cgpa-wrapper">
+        <label for="cgpa" class="form-label">Your CGPA</label>
+        <input type="number" step="0.1" class="form-control" name="cgpa" id="cgpa" required>
+      </div>
+
+      <!-- Interests -->
+      <div class="mb-4">
+        <label for="interests" class="form-label">Your interests</label>
+        <input type="text" class="form-control" name="interests" id="interests" required>
+      </div>
+
+      <button class="btn white-btn" type="submit">Save Profile</button>
+    </form>
+  </div>
+</div>
+
+<!-- Link to external JavaScript -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
