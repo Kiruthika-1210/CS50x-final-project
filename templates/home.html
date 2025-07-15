@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+   <div class="home">
+       <div class="top-section">
+           <h1>Welcome To SkillTimey</h1>
+           <p><strong><em>Carve your niche. Craft your future.</em></strong></p>
+       </div>
+       <div class="about-section">
+           <h2>What is SkillTimey?</h2>
+           <p>
+               SkillTimey is your personal growth dashboard. It helps you set learning goals, track your skill levels, complete daily tasks, earn rewards, and get career suggestions — all in one place.
+               <br><br>
+               Built with love to help students grow consistently and confidently. 🌱
+          </p>
+       </div>
+       <div class="cta-buttons">
+          <a href="/login" class="btn white-btn">Login</a>
+          <a href="/register" class="btn white-btn">Register</a>
+       </div>
+       <!-- Footer + Copyright OUTSIDE the .home div -->
+       <footer class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">GitHub</a>
+          <a href="#">CS50 Project</a>
+       </footer>
+       <p class="copyright">
+          &#169; 2025 skillTimey by Kiruthika. All rights reserved.
+       </p>
+   </div>
+{% endblock %}
